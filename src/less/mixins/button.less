@@ -1,0 +1,21 @@
+
+// button state
+//
+// Generate a customized button state
+.make_btn_state(@state){
+  @color:"@{state}_color";
+  @color_rgba:rgba(red(@@color), green(@@color), blue(@@color), .65);
+  .cow_btn_@{state}{
+    color: white;
+    background-color: @@color;
+    border-color: darken(@@color,10%);
+
+    &:hover{
+      box-shadow:1px 1px 2px rgba(0, 0, 0, 0.65),0 0 10px  darken(@@color,10%) inset
+    }
+
+    &:active{
+      box-shadow:1px 1px 2px rgba(0, 0, 0, 0.65),1px 1px 8px @color_rgba;
+    }
+  }
+}

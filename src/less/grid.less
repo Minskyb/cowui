@@ -1,0 +1,27 @@
+.cow_row{
+  display: block;
+  position: relative;
+
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.make_grid_columns();
+.make_grid();
+
+.cow_col_left,
+.cow_col_right{
+  position: relative;
+  min-height: 1px;
+  padding: ~"0 @{gutter}";
+}
+.cow_col_left{
+  float: left;
+}
+
+.cow_col_right{
+  float: right;
+}

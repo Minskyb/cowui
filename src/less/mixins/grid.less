@@ -1,0 +1,38 @@
+.make_grid_columns(){
+  .col(@index){
+    @item:~'.cow_col_@{index}';
+    .col((@index + 1),@item);
+  }
+  .col(@index,@list) when (@index =< @grid_columns){
+    @item:~'.cow_col_@{index}';
+    .col((@index + 1),~"@{list},@{item}");
+  }
+  .col(@index,@list) when (@index > @grid_columns){
+    @{list}{
+      position: relative;
+      min-height: 1px;
+      float: left;
+    };
+  }
+  .col(1);
+};
+
+.make_grid(){
+  .loop_grid_column(@grid_columns,width);
+  .loop_grid_column(@grid_columns,offset);
+};
+
+.loop_grid_column(@index,width) when (@index > 0){
+  .cow_col_@{index}{
+    width: percentage((@index / @grid_columns));
+    padding:~"0 @{gutter}";
+  }
+  .loop_grid_column((@index - 1),width);
+};
+
+.loop_grid_column(@index,offset) when (@index > 0){
+  .cow_col_offset_@{index}{
+    margin-left:percentage((@index / @grid_columns));
+  }
+  .loop_grid_column((@index - 1),offset)
+};

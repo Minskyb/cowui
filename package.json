@@ -1,0 +1,25 @@
+{
+  "name": "cowui",
+  "version": "1.0.0",
+  "description": "一个前端 ui 布局规范",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ui"
+  ],
+  "author": "Punk.Li",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-less": "^1.2.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^3.4.0"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}

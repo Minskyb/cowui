@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <link rel="stylesheet" href="../../dist/cowui.css">
+    <style>
+        [class^=cow_col_]{
+            background-color: #0b97c4;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .cow_row{
+            margin: 10px 0;
+        }
+        .container{
+            display: block;
+            position: relative;
+            width: 1068px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cow_row">
+            <div class="cow_col_24">cow_col_24</div>
+        </div>
+        <div class="cow_row">
+            <div class="cow_col_6">cow_col_6</div>
+            <div class="cow_col_6">cow_col_6</div>
+            <div class="cow_col_6">cow_col_6</div>
+            <div class="cow_col_6">cow_col_6</div>
+        </div>
+        <div class="cow_row">
+            <div class="cow_col_offset_6 cow_col_6">cow_col_offset_6 cow_col_6</div>
+            <div class="cow_col_offset_6 cow_col_6">cow_col_offset_6 cow_col_6</div>
+        </div>
+        <div class="cow_row">
+            <div class="cow_col_left">你牛逼，你不得了</div>
+            <div class="cow_col_left">是撒</div>
+            <div class="cow_col_left">不服气嘛？</div>
+        </div>
+        <div class="cow_row">
+            <div class="cow_col_right">你牛逼，你不得了</div>
+            <div class="cow_col_right">是撒</div>
+            <div class="cow_col_right">不服气嘛？</div>
+        </div>
+    </div>
+</body>
+</html>
