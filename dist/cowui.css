@@ -251,4 +251,74 @@ a.cow_btn {
   border-color: #5ec8f7;
   box-shadow: 0 0 8px rgba(45, 183, 245, 0.65);
 }
+.cow_modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.cow_modal.in {
+  display: block;
+  z-index: 1050;
+}
+.cow_modal .cow_modal_dialog {
+  background-color: white;
+  width: 40%;
+  margin: 10% auto 0;
+  border-radius: 6px;
+}
+.cow_modal.fade > .cow_modal_dialog {
+  transform: translate(0, -25%);
+  transition: 0.3s ease-in-out;
+}
+.cow_modal.fade.in > .cow_modal_dialog {
+  transform: translate(0, 0);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.cow_modal_header {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 6px 15px;
+}
+.cow_modal_header .cow_modal_title {
+  margin: 0;
+}
+.cow_modal_body {
+  padding: 6px 15px;
+}
+.cow_modal_footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 6px 15px;
+}
+.cow_modal_backdrop {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: black;
+  transition: 0.3s ease-in-out;
+}
+.cow_modal_backdrop.in {
+  z-index: 1000;
+  display: block;
+}
+.cow_modal_backdrop.fade {
+  opacity: 0;
+}
+.cow_modal_backdrop.fade.in {
+  opacity: .5;
+}
+.cow_modal_open {
+  overflow-y: hidden !important;
+}
+.cow_modal_measure_scrollbar {
+  display: block;
+  width: 1px;
+  height: 200%;
+  overflow: scroll;
+}
 /*# sourceMappingURL=cowui.css.map */
