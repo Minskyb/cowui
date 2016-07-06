@@ -11,6 +11,16 @@ body {
 * {
   box-sizing: border-box;
 }
+.clearfix:after,
+.clearfix:before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.cow_full {
+  display: block;
+  width: 100%;
+}
 .cow_row {
   display: block;
   position: relative;
@@ -205,6 +215,10 @@ body {
 .cow_col_right {
   float: right;
 }
+[class^="cow_col_"] {
+  display: block;
+  list-style: none;
+}
 .cow_btn {
   position: relative;
   display: block;
@@ -258,6 +272,7 @@ a.cow_btn {
   right: 0;
   top: 0;
   bottom: 0;
+  overflow-y: auto;
 }
 .cow_modal.in {
   display: block;
@@ -320,5 +335,94 @@ a.cow_btn {
   width: 1px;
   height: 200%;
   overflow: scroll;
+}
+.cow_menu_user_bar {
+  margin: 0;
+  line-height: 26px;
+  font-size: 14px;
+  background-color: #f7f7f7;
+  border: 1px solid #dedede;
+}
+.cow_menu_user_bar ul,
+.cow_menu_user_bar ol {
+  margin: 0;
+}
+.cow_menu_user_bar a {
+  color: #666;
+  text-decoration: none;
+}
+.cow_menu_user_bar a:hover {
+  color: #2db7f5;
+  text-decoration: underline;
+}
+.cow_slider,
+.cow_slider_content {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.cow_slider_content {
+  margin: 0;
+  padding: 0;
+}
+.cow_slider_item {
+  display: none;
+  left: 0;
+  position: relative;
+}
+.cow_slider_item.active,
+.cow_slider_item.next,
+.cow_slider_item.prev {
+  display: block;
+  transition: left 0.6s ease-in-out;
+}
+.cow_slider_item.active.left {
+  left: -100%;
+}
+.cow_slider_item.active.right {
+  left: 100%;
+}
+.cow_slider_item.next {
+  left: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.cow_slider_item.next.left {
+  left: 0;
+}
+.cow_slider_item.prev {
+  left: -100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.cow_slider_item.prev.right {
+  left: 0;
+}
+.cow_slider_nav {
+  list-style-type: none;
+  padding: 10px;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  z-index: 20;
+}
+.cow_slider_nav > * {
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #f7f7f7;
+  cursor: pointer;
+}
+.cow_slider_nav > *.active {
+  background-color: #2db7f5 !important;
+}
+.cow_slider_nav > * > *:last-child {
+  margin-right: 0px;
 }
 /*# sourceMappingURL=cowui.css.map */
