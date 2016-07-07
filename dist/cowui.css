@@ -21,6 +21,9 @@ body {
   display: block;
   width: 100%;
 }
+.cow_hide {
+  display: none;
+}
 .cow_row {
   display: block;
   position: relative;
@@ -424,5 +427,22 @@ a.cow_btn {
 }
 .cow_slider_nav > * > *:last-child {
   margin-right: 0px;
+}
+.cow_table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.cow_circle_list,
+.cow_circle_content {
+  width: 100%;
+  position: relative;
+}
+.cow_circle_list {
+  display: block;
+}
+.cow_circle_list {
+  overflow: hidden;
 }
 /*# sourceMappingURL=cowui.css.map */
