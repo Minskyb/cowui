@@ -41,7 +41,7 @@ module.exports = function(grunt){
 				},
 				src: 'src/less/cowui.less',
 				dest: 'dist/cowui.css'
-			},
+			}
 			// compileTheme: {
 			// 	options: {
 			// 		strictMath: true,
@@ -54,10 +54,23 @@ module.exports = function(grunt){
 			// 	dest: 'www/css/main-theme.css'
 			// }
 		},
+        autoprefixer: {
+            options: {
+                // Task-specific options go here.
+                browsers: ['last 2 versions', 'ie 8', 'ie 9']
+            },
+            pro: {
+                // Target-specific file lists and/or options go here.
+                expand:true,
+                cwd:'dist',
+                src:'*.css',
+                dest:'dist'
+            }
+        },
 		watch: {
 			less: {
 				files: ['src/less/**/*.less'],
-				tasks: ['clean','less']
+				tasks: ['clean','less','autoprefixer']
 			}
 		}
 	});
@@ -67,12 +80,14 @@ module.exports = function(grunt){
 	grunt.registerTask('default',[
 		'clean',
 		'less:dev',
+        'autoprefixer',
 		'watch'
 	]);
 
 	grunt.registerTask('pro',[
 		'clean',
 		'less:pro',
+        'autoprefixer',
 		'cssmin'
 	])
 

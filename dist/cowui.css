@@ -288,11 +288,13 @@ a.cow_btn {
   border-radius: 6px;
 }
 .cow_modal.fade > .cow_modal_dialog {
-  transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+      transform: translate(0, -25%);
   transition: 0.3s ease-in-out;
 }
 .cow_modal.fade.in > .cow_modal_dialog {
-  transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+      transform: translate(0, 0);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 .cow_modal_header {
@@ -445,4 +447,3 @@ a.cow_btn {
 .cow_circle_list {
   overflow: hidden;
 }
-/*# sourceMappingURL=cowui.css.map */
