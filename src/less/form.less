@@ -1,5 +1,14 @@
+.cow_form{
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
 
 .cow_form_control{
+  display: block;
   width:100%;
   outline: none;
   border-radius: 6px;
@@ -8,6 +17,54 @@
 
   &:focus{
     border-color: lighten(@primary_color,10%);
-    box-shadow: 0 0 8px @color_rgba;
+    box-shadow: 0 0 8px rgba(red(@primary_color), green(@primary_color), blue(@primary_color), .65);;
+  }
+  &.warn,
+  &.warn:focus{
+    border-color: lighten(@warning_color,10%);
+    box-shadow: 0 0 8px rgba(red(@warning_color), green(@warning_color), blue(@warning_color), .65);;
   }
 }
+
+.cow_form_group{
+  position: relative;
+  margin: 10px 0;
+}
+
+/*
+  input group for extra icon or char
+*/
+.cow_input_group{
+  position: relative;
+
+  .cow_extra_right{
+      position: absolute;
+      right: @padding_base_horizontal;
+      top:50%;
+      margin-top: -2px;
+  }
+  .cow_add_right{
+    padding-right: (@padding_base_horizontal * 2);
+  }
+  .cow_extra_left{
+    position: absolute;
+    left: @padding_base_horizontal;
+    top:50%;
+    margin-top: -2px;
+  }
+  .cow_add_left{
+    padding-left: (@padding_base_horizontal * 2);
+  }
+}
+
+/* dropdown icon */
+.cow_caret{
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 4px dashed;
+  vertical-align: middle;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+

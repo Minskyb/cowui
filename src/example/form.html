@@ -9,15 +9,98 @@
             width: 1068px;
             margin: 10px auto;
         }
+        .cow_dropdown .cow_dropdown_menu{
+            display: block;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <form class="cow_form">
-           <div class="cow_form_groups">
-               <input class="cow_form_control">
-           </div>
-        </form>
+    <div class="container clearfix">
+        <div class="cow_col_12">
+            <form class="cow_form vertical_form">
+                <div class="cow_form_group">
+                    <input type="text" class="cow_form_control" placeholder="普通输入框">
+                </div>
+                <div class="cow_form_group">
+                    <input type="text"  class="cow_form_control warn" placeholder="输入框警告状态">
+                </div>
+                <div class="cow_form_group">
+                    <div class="cow_input_group">
+                        <input type="text" class="cow_form_control cow_add_right" placeholder="输入框组+额外信息">
+                        <span class="cow_caret cow_extra_right"></span>
+                    </div>
+                </div>
+                <div class="cow_form_group">
+                    <select class="cow_form_control">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                <div class="cow_form_group">
+                   <div class="cow_row">
+                       <div class="cow_col_8">
+                           <div class="cow_dropdown">
+                               <div class="cow_input_group">
+                                   <span class="cow_form_control cow_add_right">请选择省份</span>
+                                <span class="cow_icon_caret cow_extra_right">
+                                    <input type="hidden" name="province" value="">
+                                </span>
+                               </div>
+                               <ul class="cow_dropdown_menu">
+                                   <li class=""><a href="javascript:void(0)">国家宝藏1</a></li>
+                                   <li class=""><a href="javascript:void(0)">国家宝藏2</a></li>
+                                   <li class=""><a href="javascript:void(0)">汽车总动员</a></li>
+                                   <li class=""><a href="javascript:void(0)">头脑特工队</a></li>
+                                   <li role="separator" class="cow_divider"></li>
+                                   <li class=""><a href="javascript:void(0)">最强大脑</a></li>
+                                   <li class=""><a href="javascript:void(0)">原来非常勿扰</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="cow_col_8">
+                           <div class="cow_dropdown">
+                               <div class="cow_input_group">
+                                   <span class="cow_form_control cow_add_right">请选择城市</span>
+                                     <span class="cow_icon_caret cow_extra_right">
+                                         <input type="hidden" name="city" value="">
+                                    </span>
+                               </div>
+                               <ul class="cow_dropdown_menu">
+                                   <li class=""><a href="javascript:void(0)">国家宝藏1</a></li>
+                                   <li class=""><a href="javascript:void(0)">国家宝藏2</a></li>
+                                   <li class=""><a href="javascript:void(0)">汽车总动员</a></li>
+                                   <li class=""><a href="javascript:void(0)">头脑特工队</a></li>
+                                   <li role="separator" class="cow_divider"></li>
+                                   <li class=""><a href="javascript:void(0)">最强大脑</a></li>
+                                   <li class=""><a href="javascript:void(0)">原来非常勿扰</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="cow_col_8">
+                           <div class="cow_dropdown">
+                               <div class="cow_input_group">
+                                   <span class="cow_form_control cow_add_right">请选择区县</span>
+                                <span class="cow_icon_caret cow_extra_right">
+                                    <input type="hidden" name="district" value="">
+                                </span>
+                               </div>
+                               <ul class="cow_dropdown_menu">
+                                   <li class=""><a href="javascript:void(0)">国家宝藏1</a></li>
+                                   <li class=""><a href="javascript:void(0)">国家宝藏2</a></li>
+                                   <li class=""><a href="javascript:void(0)">汽车总动员</a></li>
+                                   <li class=""><a href="javascript:void(0)">头脑特工队</a></li>
+                                   <li role="separator" class="cow_divider"></li>
+                                   <li class=""><a href="javascript:void(0)">最强大脑</a></li>
+                                   <li class=""><a href="javascript:void(0)">原来非常勿扰</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
